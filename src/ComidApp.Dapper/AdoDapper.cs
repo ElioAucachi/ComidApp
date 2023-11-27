@@ -38,10 +38,10 @@ public class AdoDapper : IAdo
 #endregion
 #region Restaurant
 private static readonly string _queryRestaPass
-    =@"select*
+    =@"select *
     from Restaurant
-    where email = @unemail
-    and pasword= SHA2(@unpasword, 256)
+    where email = @unEmail
+    and pasword= SHA2(@unPasword, 256)
     limit 1;";
     public void AltaRestaurante(Restaurant restaurant)
     {
