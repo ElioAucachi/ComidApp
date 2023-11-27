@@ -18,7 +18,7 @@ public class AdoDapper : IAdo
         where email = @unEmail
         and pasword = SHA2(@unPasword, 256)
         LIMIT 1;";
-    public void RegistrarCliente1(Cliente cliente)
+    public void RegistrarCliente(Cliente cliente)
     {
         var parametros = new DynamicParameters();
         parametros.Add("@unIdCliente",direction: ParameterDirection.Output);
@@ -41,7 +41,7 @@ private static readonly string _queryRestaPass
     =@"select*
     from Restaurant
     where email = @unemail
-    and pasword= SHA2(@unpasword)
+    and pasword= SHA2(@unpasword, 256)
     limit 1;";
     public void AltaRestaurante(Restaurant restaurant)
     {

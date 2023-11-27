@@ -4,7 +4,7 @@ create database 5to_comidapp;
 
 use 5to_comidapp;
 
-CREATE table Restaurante
+CREATE table Restaurant
 
 (
 
@@ -20,7 +20,7 @@ pasword char(64),
 
 primary key (idRestaurant),
 
-FULLTEXT (restaurante )
+FULLTEXT (restaurant )
 
 );
 
@@ -42,9 +42,9 @@ idPLato mediumint unsigned,
 
 primary key(idPlato),
 
-CONSTRAINT FK_Restaurante_Plato FOREIGN KEY (idRestaurant)
+CONSTRAINT FK_Restaurant_Plato FOREIGN KEY (idRestaurant)
 
-REFERENCES Restaurante(idRestaurant),
+REFERENCES Restaurant(idRestaurant),
 
 FULLTEXT (Plato,descripcion)
 
@@ -88,9 +88,9 @@ descripcion varchar(45)not null,
 
 primary key (numero),
 
-constraint fk_Restaurante_Pedido foreign key(idRestaurant)
+constraint fk_Restaurant_Pedido foreign key(idRestaurant)
 
-references Restaurante(idRestaurant),
+references Restaurant(idRestaurant),
 
 constraint FK_Cliente_idCliente foreign key(idCliente)
 

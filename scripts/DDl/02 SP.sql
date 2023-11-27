@@ -1,7 +1,7 @@
 DELIMITER $$
 use 5to_comidapp $$
 DELIMITER $$
-Create procedure RegistrarCliente1 (in unidCliente mediumint unsigned, in unemail varchar(45),in uncliente varchar(45), in unapellido varchar(45),in unpasword char(64))
+Create procedure RegistrarCliente (in unidCliente mediumint unsigned, in unemail varchar(45),in uncliente varchar(45), in unapellido varchar(45),in unpasword char(64))
 
 begin
 
@@ -17,7 +17,7 @@ CREATE PROCEDURE AltaRestaurante(in unidRestaurant SMALLINT UNSIGNED,in unrestau
 
 begin
 
-	Insert into Restaurante (idRestaurant, domicilio,restaurante,email,pasword)
+	Insert into Restaurant (idRestaurant, domicilio,restaurante,email,pasword)
 
 	VALUES (unidRestaurant,undomicilio, unrestaurante, unemail,Sha2(unpasword,256));
 

@@ -1,7 +1,7 @@
 namespace ComidApp.Core;
 public interface IAdo
 {
-    void RegistrarCliente1 (Cliente cliente);
+    void RegistrarCliente (Cliente cliente);
     Cliente? ClientePorPass(string email, string pasword);
     void AltaRestaurante(Restaurant restaurant);
     Restaurant? RestaurantPorPass(string email,string pasword);
